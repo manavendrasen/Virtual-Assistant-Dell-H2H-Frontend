@@ -10,7 +10,9 @@ In the project directory, you can run:
 
 Run
 
-`docker-compose -f docker-compose.yml -f docker-compose-dev.yml down --build`
+```sh
+docker-compose -f docker-compose.yml -f docker-compose-dev.yml down --build
+```
 
 - Add -d to run in detached mode (no logs)
 
