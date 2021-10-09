@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  dell-h2h-frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./src:/app/src:ro
+    env_file:
+      - ./.env.development.local

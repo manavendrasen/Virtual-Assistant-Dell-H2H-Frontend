@@ -2,4 +2,3 @@ node_modules
 Dockerfile
 .git
 .gitignore
-.env
