@@ -1,7 +1,7 @@
 import { Box, Avatar } from "@mui/material";
 
 import { ShoppingCart, Person } from "@mui/icons-material";
-import logo from "../images/dell_logo.svg";
+import logo from "../../../../assets/images/dell_logo.svg";
 
 const Navbar = () => (
   <Box
