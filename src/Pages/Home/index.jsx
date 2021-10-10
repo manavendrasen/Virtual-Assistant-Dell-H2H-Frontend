@@ -1,9 +1,13 @@
 import React from "react";
-import Button from "@mui/material/Button";
+import Navbar from "./Components/Navbar";
+import Footer from "./Components/Footer";
+import Header from "./Components/Header";
 
 const HomePage = () => (
-  <div className="flex h-screen justify-center items-center">
-    <Button variant="contained">Home Page</Button>
+  <div>
+    <Navbar />
+    <Header />
+    <Footer />
   </div>
 );
 

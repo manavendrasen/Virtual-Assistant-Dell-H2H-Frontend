@@ -25,19 +25,20 @@
     }
   },
   "rules": {
-    // "react/prop-types": "off",
-    // "prettier/prettier": "warn",
-    // "react/react-in-jsx-scope": "off",
-    // "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
-    // "react/display-name": 1,
-    // "import/no-cycle": "off",
-    // "react/jsx-props-no-spreading": "off",
-    // "import/prefer-default-export": "off",
-    // "react/no-array-index-key": "off",
-    // "jsx-a11y/anchor-is-valid": "off",
-    // "react/destructuring-assignment": "off",
-    // "quotes": ["warn", "double"],
-    // "semi": ["warn", "always"]
+    "react/prop-types": "off",
+    "prettier/prettier": "warn",
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "react/display-name": 1,
+    "import/no-cycle": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/prefer-default-export": "off",
+    "react/no-array-index-key": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/destructuring-assignment": "off",
+    "quotes": ["warn", "double"],
+    "semi": ["warn", "always"],
+    "no-unused-vars": "off"
   },
   "plugins": ["react", "prettier"]
 }
