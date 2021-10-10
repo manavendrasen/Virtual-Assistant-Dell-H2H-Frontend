@@ -11,7 +11,7 @@ In the project directory, you can run:
 Run
 
 ```sh
-docker-compose -f docker-compose.yml -f docker-compose-dev.yml down --build
+docker-compose -f docker-compose.yml -f docker-compose-dev.yml up --build
 ```
 
 - Add -d to run in detached mode (no logs)
