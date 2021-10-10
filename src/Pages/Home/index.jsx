@@ -4,7 +4,7 @@ import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 
 const HomePage = () => (
-  <div>
+  <div style={{ display: "flex", flexDirection: "column" }}>
     <Navbar />
     <Header />
     <Footer />

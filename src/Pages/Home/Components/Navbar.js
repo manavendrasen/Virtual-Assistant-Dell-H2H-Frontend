@@ -8,7 +8,7 @@ const Navbar = () => (
     sx={{
       width: "100%",
       height: 80,
-      margin: 0,
+      marginTop: 2,
       display: "flex",
       direction: "column",
       justifyContent: "space-between",
