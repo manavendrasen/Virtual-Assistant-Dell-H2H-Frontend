@@ -1,0 +1,15 @@
+.chatBot .rw-title {
+  font-size: 10px !important;
+}
+
+.rw-conversation-container .rw-header {
+  background-color: aqua !important;
+}
+
+.chatBot .rw-header .rw-with-subtitle {
+  background-color: aqua;
+}
+
+.chatBot {
+  background-color: green;
+}

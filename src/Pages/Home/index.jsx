@@ -1,13 +1,15 @@
 import React from "react";
 import Layout from "./Components/Layout";
 import Header from "./Components/Header";
+import { Chatbot } from "../../Components";
 
 const HomePage = () => (
-  <div>
+  <>
     <Layout>
       <Header />
     </Layout>
-  </div>
+    <Chatbot />
+  </>
 );
 
 export default HomePage;
