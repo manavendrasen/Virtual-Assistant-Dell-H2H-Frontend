@@ -12,7 +12,7 @@ const Footer = () => {
   const IconArray = [
     {
       icon: <Laptop fontSize="large" sx={{ alignSelf: "center" }} />,
-      name: "Laptops",
+      name: "Laptop",
     },
     {
       icon: (
@@ -30,7 +30,11 @@ const Footer = () => {
     },
   ];
   return (
-    <Grid sx={{ flexGrow: 1, bgcolor: grey[100] }} container spacing={2}>
+    <Grid
+      sx={{ flexGrow: 1, bgcolor: grey[100], bottom: 0, position: "fixed" }}
+      container
+      spacing={2}
+    >
       <Grid item xs={12}>
         <Grid container justifyContent="center" alignItems="center" spacing={2}>
           {IconArray.map((value, index) => (
