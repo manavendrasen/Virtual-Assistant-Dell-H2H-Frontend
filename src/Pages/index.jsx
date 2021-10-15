@@ -1,4 +1,4 @@
 import AdminDashboard from "./Admin";
-import HomePage from "./Home";
+// import HomePage from "./Home";
 
-export { AdminDashboard, HomePage };
+export { AdminDashboard };

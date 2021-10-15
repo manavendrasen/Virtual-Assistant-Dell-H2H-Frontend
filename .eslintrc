@@ -38,7 +38,9 @@
     "react/destructuring-assignment": "off",
     "quotes": ["warn", "double"],
     "semi": ["warn", "always"],
-    "no-unused-vars": "off"
+    "no-unused-vars": "off",
+    "no-underscore-dangle": "off",
+    "no-param-reassign": "off"
   },
   "plugins": ["react", "prettier"]
 }

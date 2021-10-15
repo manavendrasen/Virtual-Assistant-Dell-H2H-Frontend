@@ -4,25 +4,22 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 // Material UI Theme
 import theme from "./mui.theme";
-
+import ReduxProvider from "./store";
 // Pages
-import { AdminDashboard, HomePage } from "./Pages";
+import { AdminDashboard } from "./Pages";
 
 const App = () => (
-  <>
+  <ReduxProvider>
     <ThemeProvider theme={theme}>
       <Router>
         <Switch>
           <Route exact path="/">
-            <HomePage />
-          </Route>
-          <Route exact path="/admin">
             <AdminDashboard />
           </Route>
         </Switch>
       </Router>
     </ThemeProvider>
-  </>
+  </ReduxProvider>
 );
 
 export default App;

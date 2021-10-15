@@ -1,6 +1,8 @@
 [
   {
     "issueId": "#1234",
+    "issueDate": "5/10/2021",
+    "issueTime": "1",
     "issueIn": {
       "email": false,
       "zip": false,
@@ -8,9 +10,7 @@
     },
     "order": {
       "orderId": "36472368",
-      "userName": "TestCase1",
-      "userEmail": "testcase1@test.com",
-      "userPhone": "987362632",
+      "orderEmail": "testcase1@test.com",
       "orderDate": "10/10/2021",
       "address": {
         "home": "Home-Address",
@@ -31,6 +31,8 @@
 
   {
     "issueId": "#1434",
+    "issueDate": "5/10/2021",
+    "issueTime": "2",
     "issueIn": {
       "email": true,
       "zip": false,
@@ -39,7 +41,7 @@
     "order": {
       "orderId": "36468968",
       "userName": "TestCase2",
-      "userEmail": "testcase2test.com",
+      "orderEmail": "testcase2test.com",
       "userPhone": "998862632",
       "orderDate": "9/10/2021",
       "address": {
@@ -61,6 +63,8 @@
 
   {
     "issueId": "#234",
+    "issueDate": "6/10/2021",
+    "issueTime": "1",
     "issueIn": {
       "email": false,
       "zip": true,
@@ -69,7 +73,7 @@
     "order": {
       "orderId": "61272368",
       "userName": "TestCase3",
-      "userEmail": "testcase3@test.com",
+      "orderEmail": "testcase3@test.com",
       "userPhone": "709939284",
       "orderDate": "10/10/2021",
       "address": {
