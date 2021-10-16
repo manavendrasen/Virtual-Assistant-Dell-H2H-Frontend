@@ -5,14 +5,22 @@ import "./Component-Styles/RegionDataStyle.css";
 const RegionDataDisplay = () => {
   const [myState] = useSelector(state => state.region);
   return (
-    <Box sx={{ padding: 15 }}>
-      <Typography variant="h5" className="country">
+    <Box
+      sx={{
+        margin: 7,
+        paddingLeft: 5,
+      }}
+    >
+      <Typography variant="h2" className="country">
         {myState.country}
       </Typography>
-      <Typography>
-        Email Issues:<span>{myState.email}</span>
+      <Typography variant="h5" className="email">
+        Email Issues:{" "}
+        <span style={{ fontWeight: "bold" }}>{myState.email}</span>
       </Typography>
-      <Typography>{myState.zip}</Typography>
+      <Typography variant="h5" className="zip">
+        Zip Issues: <span style={{ fontWeight: "bolder" }}>{myState.zip}</span>
+      </Typography>
     </Box>
   );
 };

@@ -6,16 +6,15 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import theme from "./mui.theme";
 import ReduxProvider from "./store";
 // Pages
-import { AdminDashboard } from "./Pages";
+import { AdminDashboard, OrderDetails } from "./Pages";
 
 const App = () => (
   <ReduxProvider>
     <ThemeProvider theme={theme}>
       <Router>
         <Switch>
-          <Route exact path="/">
-            <AdminDashboard />
-          </Route>
+          <Route exact path="/" component={AdminDashboard} />
+          <Route path="/orders/:orderId" component={OrderDetails} />
         </Switch>
       </Router>
     </ThemeProvider>
