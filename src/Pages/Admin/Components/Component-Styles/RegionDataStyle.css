@@ -1,0 +1,16 @@
+.country {
+  color: rgba(0, 0, 0, 0.74);
+  font-weight: bold !important;
+  font-family: "Courier New", Courier, monospace !important;
+}
+
+.email {
+  color: #dc3912;
+  font-weight: 800 !important;
+  font-family: "Courier New", Courier, monospace !important;
+}
+.zip {
+  color: #3366cc;
+  font-weight: 800 !important;
+  font-family: "Courier New", Courier, monospace !important;
+}
