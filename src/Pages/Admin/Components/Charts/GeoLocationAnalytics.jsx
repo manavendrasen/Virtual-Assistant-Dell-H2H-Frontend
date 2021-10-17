@@ -34,7 +34,7 @@ const GeoLocation = () => {
     <>
       {Data.length > 0 ? (
         <div className="flex flex-col py-4 pr-8">
-          <p>Failure Patterns By Time</p>
+          <p>Failure Patterns By Location</p>
           <Chart
             width={800}
             height={400}
