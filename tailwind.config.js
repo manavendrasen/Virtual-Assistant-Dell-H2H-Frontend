@@ -1,7 +1,7 @@
 // eslint-disable-next-line import/no-extraneous-dependencies
 
 module.exports = {
-  purge: ["./components/**/*.js", "./pages/**/*.js"],
+  purge: ["./src/Components/**/*.js", "./src/Pages/**/*.js"],
   theme: {
     extend: {
       colors: {
