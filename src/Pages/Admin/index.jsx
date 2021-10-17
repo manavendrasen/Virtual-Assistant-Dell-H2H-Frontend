@@ -11,7 +11,7 @@ import Calendar from "./Components/Calendar/Toggle";
 
 const AdminDashboard = () => (
   <>
-    <Navbar />
+    <Navbar title="Admin Dashboard" />
     {/* <Typography variant="h5" className="px-24 py-4">
       Order Issue Analytics
     </Typography> */}
