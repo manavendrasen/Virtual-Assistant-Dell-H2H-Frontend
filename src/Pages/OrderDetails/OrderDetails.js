@@ -19,6 +19,7 @@ const OrderDetails = () => {
         console.error(err);
       }
     };
+    document.title = `Order Details #${orderId}`;
     fetch();
   }, []);
   return (

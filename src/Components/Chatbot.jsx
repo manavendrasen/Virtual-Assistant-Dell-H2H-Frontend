@@ -23,7 +23,7 @@ const Chatbot = () => {
     <div className={styles.chatBot} onKeyDown={handleKeyDown}>
       <Widget
         initPayload="greet"
-        socketUrl="http://1ab7-2405-201-301c-703e-78e6-cda0-9dc1-24ef.ngrok.io"
+        socketUrl="http://aed4-2405-201-301c-703e-cdb-c6b3-846-47c7.ngrok.io"
         socketPath="/socket.io/"
         title="Dell Support Bot"
         openLauncherImage={chatLauncher}
