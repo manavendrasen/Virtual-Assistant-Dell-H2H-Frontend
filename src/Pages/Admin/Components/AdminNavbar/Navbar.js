@@ -1,14 +1,9 @@
-import { Box, Avatar, Typography } from "@mui/material";
+import { Box, Avatar, Typography, TextField } from "@mui/material";
+import SearchIcon from "@mui/icons-material/Search";
 import logo from "./images/dell_logo.svg";
 
 const Navbar = () => (
-  <Box
-    sx={{
-      display: "flex",
-      justifyContent: "space-between",
-      margin: "0 2em",
-    }}
-  >
+  <Box className="flex justify-between items-center px-8 mb-4 border-b-2 border-gray-300">
     <Box
       style={{
         display: "flex",
@@ -16,11 +11,14 @@ const Navbar = () => (
         alignItems: "center",
       }}
     >
-      <Avatar src={logo} sx={{ margin: 2 }} />
-      <Typography>Dell Admin DashBoard</Typography>
+      <Avatar src={logo} className="mr-4" />
+      <Typography variant="h6">Admin DashBoard</Typography>
     </Box>
 
-    <Avatar sx={{ bgcolor: "#B0D4F2", margin: 2 }}>OP</Avatar>
+    <div className="flex gap-4 items-center">
+      <TextField label="Search Issues" size="small" />
+      <Avatar sx={{ bgcolor: "#B0D4F2", margin: 2 }}>MS</Avatar>
+    </div>
   </Box>
 );
 
