@@ -26,35 +26,36 @@ const Graph = () => {
   return (
     <>
       {Data.length > 0 ? (
-        <Chart
-          width={900}
-          height={600}
-          chartType="AreaChart"
-          loader={<div>Loading Chart</div>}
-          data={graphDataHandler(Data)}
-          options={{
-            title: "Failure Patterns By Time",
-            hAxis: {
-              title: "Time",
-              titleTextStyle: { color: "#333" },
-              viewWindow: { min: 0, max: 5 },
-            },
-            vAxis: { minValue: 0 },
-            animation: {
-              startup: true,
-              easing: "linear",
-              duration: 1500,
-            },
-            chartArea: { width: "78.5%", height: "80%" },
-          }}
-          rootProps={{ "data-testid": "1" }}
-        />
+        <div className="flex flex-col py-4 pr-8">
+          <p>Failure Patterns By Time</p>
+          <Chart
+            width={800}
+            height={400}
+            chartType="LineChart"
+            loader={<div>Loading Chart</div>}
+            data={graphDataHandler(Data)}
+            options={{
+              hAxis: {
+                title: "Time",
+                titleTextStyle: { color: "#333" },
+              },
+              vAxis: { title: "Number of Issues", minValue: 0 },
+              animation: {
+                startup: true,
+                easing: "linear",
+                duration: 1500,
+              },
+              chartArea: { width: "70%", height: "70%" },
+            }}
+            rootProps={{ "data-testid": "1" }}
+          />
+        </div>
       ) : (
         <Box
           sx={{
             display: "flex",
-            width: 900,
-            height: 600,
+            width: 800,
+            height: 400,
             justifyContent: "center",
             alignItems: "center",
           }}

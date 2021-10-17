@@ -25,28 +25,31 @@ const PieChart = () => {
   return (
     <>
       {Data ? (
-        <Chart
-          width={599}
-          height={600}
-          chartType="PieChart"
-          loader={<div>Loading Chart</div>}
-          data={pieChartDataHandler(Data)}
-          options={{
-            title: "Each Issue",
-            animation: {
-              startup: true,
-              easing: "out",
-              duration: 500,
-            },
-          }}
-          rootProps={{ "data-testid": "1" }}
-        />
+        <div className="flex flex-col py-4 pr-8">
+          <p>Category Wise Issue</p>
+          <Chart
+            width={400}
+            height={400}
+            chartType="PieChart"
+            loader={<div>Loading Chart</div>}
+            data={pieChartDataHandler(Data)}
+            options={{
+              animation: {
+                startup: true,
+                easing: "out",
+                duration: 500,
+              },
+              chartArea: { width: "100%", height: "100%" },
+            }}
+            rootProps={{ "data-testid": "1" }}
+          />
+        </div>
       ) : (
         <Box
           sx={{
             display: "flex",
-            width: 600,
-            height: 500,
+            width: 400,
+            height: 400,
             justifyContent: "center",
             alignItems: "center",
           }}

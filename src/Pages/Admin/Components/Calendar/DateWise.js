@@ -27,9 +27,9 @@ const DateWise = () => {
           }}
           renderInput={(startProps, endProps) => (
             <>
-              <TextField {...startProps} />
+              <TextField size="small" {...startProps} />
               <Box sx={{ mx: 2 }}> to </Box>
-              <TextField {...endProps} />
+              <TextField size="small" {...endProps} />
             </>
           )}
         />

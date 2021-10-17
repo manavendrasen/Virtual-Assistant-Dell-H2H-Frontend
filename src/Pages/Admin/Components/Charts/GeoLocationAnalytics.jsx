@@ -33,49 +33,52 @@ const GeoLocation = () => {
   return (
     <>
       {Data.length > 0 ? (
-        <Chart
-          width={900}
-          height={600}
-          chartType="GeoChart"
-          data={locationDataHandler(Data)}
-          options={{
-            title: "Failure Patterns By Time",
-            colorAxis: { colors: ["red"] },
-          }}
-          chartEvents={[
-            {
-              eventName: "select",
-              callback({ chartWrapper }) {
-                const chart = chartWrapper.getChart();
-                if (chart !== null) {
-                  const selection = chart.getSelection();
-                  if (selection.length === 1) {
-                    const [selectedItem] = selection;
-                    const dataTable = chartWrapper.getDataTable();
-                    const { row, column } = selectedItem;
-                    const SelectedData = [
-                      {
-                        country: dataTable.getValue(row, 0),
-                        email: dataTable.getValue(row, 1),
-                        zip: dataTable.getValue(row, 2),
-                      },
-                    ];
+        <div className="flex flex-col py-4 pr-8">
+          <p>Failure Patterns By Time</p>
+          <Chart
+            width={800}
+            height={400}
+            chartType="GeoChart"
+            data={locationDataHandler(Data)}
+            options={{
+              title: "Failure Patterns By Time",
+              colorAxis: { colors: ["#E4424D"] },
+            }}
+            chartEvents={[
+              {
+                eventName: "select",
+                callback({ chartWrapper }) {
+                  const chart = chartWrapper.getChart();
+                  if (chart !== null) {
+                    const selection = chart.getSelection();
+                    if (selection.length === 1) {
+                      const [selectedItem] = selection;
+                      const dataTable = chartWrapper.getDataTable();
+                      const { row, column } = selectedItem;
+                      const SelectedData = [
+                        {
+                          country: dataTable.getValue(row, 0),
+                          email: dataTable.getValue(row, 1),
+                          zip: dataTable.getValue(row, 2),
+                        },
+                      ];
 
-                    dispatch(setDataByClickOfRegion(SelectedData));
+                      dispatch(setDataByClickOfRegion(SelectedData));
+                    }
                   }
-                }
+                },
               },
-            },
-          ]}
-          mapsApiKey="YOUR_KEY_HERE"
-          rootProps={{ "data-testid": "1" }}
-        />
+            ]}
+            mapsApiKey="YOUR_KEY_HERE"
+            rootProps={{ "data-testid": "1" }}
+          />
+        </div>
       ) : (
         <Box
           sx={{
             display: "flex",
-            width: 900,
-            height: 600,
+            width: 800,
+            height: 400,
             justifyContent: "center",
             alignItems: "center",
           }}

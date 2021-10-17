@@ -56,48 +56,50 @@ const AdminTable = () => {
   };
 
   return (
-    <Box style={{ margin: "2em" }}>
-      <Typography>Analytics Table</Typography>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <Box>
-          <Typography>
-            <FilterListIcon /> Filter By
-          </Typography>
-          <Box style={{ display: "flex", alignItems: "center" }}>
-            <Checkbox
-              checked={checked1}
-              onChange={handleChange1}
-              inputProps={{ "aria-label": "controlled" }}
-              name="Resolved"
-            />
-            <Typography>Resolved</Typography>
-            <Checkbox
-              checked={checked2}
-              onChange={handleChange2}
-              inputProps={{ "aria-label": "controlled" }}
-              name="Not Resolved"
-            />
-            <Typography>Not Resolved</Typography>
-          </Box>
+    <Box className="px-24 border-t-2 border-gray-300 py-8">
+      <Typography variant="h4">Issue Records</Typography>
+      <div className="flex justify-between py-4 items-center">
+        <Box className="flex items-center">
+          <Typography>Filter By: </Typography>
+          <div className="flex items-center gap-4">
+            <div className="flex gap-0 items-center ml-4">
+              <Checkbox
+                checked={checked1}
+                onChange={handleChange1}
+                inputProps={{ "aria-label": "controlled" }}
+                name="Resolved"
+              />
+              <Typography>Resolved</Typography>
+            </div>
+            <div className="flex gap-0 items-center">
+              <Checkbox
+                checked={checked2}
+                onChange={handleChange2}
+                inputProps={{ "aria-label": "controlled" }}
+                name="Not Resolved"
+              />
+              <Typography>Not Resolved</Typography>
+            </div>
+          </div>
         </Box>
         <Button
           variant="contained"
           component="span"
-          sx={{ float: "right", margin: 1 }}
           onClick={pdfDownload}
           startIcon={<DownloadIcon />}
         >
           Download
         </Button>
-      </Box>
+      </div>
 
-      <Paper sx={{ width: "100%", overflow: "hidden", float: "right" }}>
+      <Paper
+        sx={{
+          width: "100%",
+          overflow: "hidden",
+          float: "right",
+          marginBottom: "4rem",
+        }}
+      >
         <TableContainer component={Paper}>
           <Table stickyHeader aria-label="sticky header table" id="issue-table">
             <TableHead>
@@ -109,19 +111,19 @@ const AdminTable = () => {
                   Issue ID
                 </TableCell>
                 <TableCell align="center" sx={{ bgcolor: "#F5F5F5" }}>
-                  Email
+                  User Email
                 </TableCell>
                 <TableCell align="center" sx={{ bgcolor: "#F5F5F5" }}>
-                  Location
+                  Supplier Location
                 </TableCell>
                 <TableCell align="center" sx={{ bgcolor: "#F5F5F5" }}>
-                  Date
+                  Order Date
                 </TableCell>
                 <TableCell align="center" sx={{ bgcolor: "#F5F5F5" }}>
                   Issue
                 </TableCell>
                 <TableCell align="center" sx={{ bgcolor: "#F5F5F5" }}>
-                  Status
+                  Order Status
                 </TableCell>
               </TableRow>
             </TableHead>
@@ -150,8 +152,11 @@ const AdminTable = () => {
                       align="center"
                       sx={
                         row.isResolved
-                          ? { bgcolor: "#4AAF05", textAlign: "center" }
-                          : { bgcolor: "#FB8832", textAlign: "center" }
+                          ? {
+                              color: "#7AA809",
+                              textAlign: "center",
+                            }
+                          : { color: "#E4424D", textAlign: "center" }
                       }
                     >
                       {row.isResolved ? (

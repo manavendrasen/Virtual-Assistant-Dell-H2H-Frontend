@@ -13,25 +13,23 @@ const Toggle = () => {
   };
 
   return (
-    <Box
-      style={{
-        alignItems: "center",
-      }}
-    >
-      <Typography sx={{ margin: "1em 2em" }}>Toggle Graph</Typography>
-      <ToggleButtonGroup
-        color="primary"
-        value={alignment}
-        exclusive
-        onChange={handleChange}
-        style={{
-          height: 45,
-          margin: "1em 2em",
-        }}
-      >
-        <ToggleButton value="View By Time">View By Time</ToggleButton>
-        <ToggleButton value="View By Location">View By Location</ToggleButton>
-      </ToggleButtonGroup>
+    <Box>
+      <div className="flex flex-col gap-2 mb-4 mt-2 items-start">
+        <p className="text-sm">View Graph:</p>
+        <ToggleButtonGroup
+          color="primary"
+          value={alignment}
+          exclusive
+          onChange={handleChange}
+          style={{
+            height: 40,
+          }}
+        >
+          <ToggleButton value="View By Time">View By Time</ToggleButton>
+          <ToggleButton value="View By Location">View By Location</ToggleButton>
+        </ToggleButtonGroup>
+      </div>
+
       <Box>
         {alignment === "View By Time" ? <Graph /> : <GeoLocationAnalytics />}
       </Box>

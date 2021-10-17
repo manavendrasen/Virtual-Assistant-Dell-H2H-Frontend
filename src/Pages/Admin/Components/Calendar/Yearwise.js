@@ -32,7 +32,7 @@ const YearWise = () => {
           views={["year"]}
           value={value}
           onChange={handleChange}
-          renderInput={params => <TextField {...params} />}
+          renderInput={params => <TextField size="small" {...params} />}
         />
       </LocalizationProvider>
     </div>
