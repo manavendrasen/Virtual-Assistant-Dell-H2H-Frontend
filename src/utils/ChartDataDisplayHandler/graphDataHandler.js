@@ -47,9 +47,9 @@ const graphDataHandler = data => {
     }
     result.push([
       date,
-      element.emailErrors,
-      element.zipErrors,
-      element.fraudList,
+      element.emailErrors * 10,
+      element.zipErrors * 10,
+      element.fraudList * 10,
     ]);
   });
   return result;

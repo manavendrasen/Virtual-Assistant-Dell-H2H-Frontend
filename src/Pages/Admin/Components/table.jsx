@@ -13,12 +13,12 @@ import {
   CircularProgress,
   Checkbox,
 } from "@mui/material";
-import FilterListIcon from "@mui/icons-material/FilterList";
+
 import DownloadIcon from "@mui/icons-material/Download";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-
+import convertExcel from "./ConvertIntoPDF/convertExcel";
 import pdfDownload from "./ConvertIntoPDF/convertPDF";
 
 const AdminTable = () => {
@@ -90,6 +90,14 @@ const AdminTable = () => {
         >
           Download
         </Button>
+        <Button
+          variant="contained"
+          component="span"
+          onClick={() => convertExcel(Data)}
+          startIcon={<DownloadIcon />}
+        >
+          Excel
+        </Button>
       </div>
 
       <Paper
@@ -123,7 +131,7 @@ const AdminTable = () => {
                   Issue
                 </TableCell>
                 <TableCell align="center" sx={{ bgcolor: "#F5F5F5" }}>
-                  Order Status
+                  Issue Status
                 </TableCell>
               </TableRow>
             </TableHead>
