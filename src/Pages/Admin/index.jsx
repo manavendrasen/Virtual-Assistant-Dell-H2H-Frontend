@@ -12,9 +12,9 @@ import Calendar from "./Components/Calendar/Toggle";
 const AdminDashboard = () => (
   <>
     <Navbar />
-    <Typography variant="h5" className="px-24 py-4">
+    {/* <Typography variant="h5" className="px-24 py-4">
       Order Issue Analytics
-    </Typography>
+    </Typography> */}
     <Calendar />
 
     <div className="flex items-end justify-between gap-12 mb-6 px-24">

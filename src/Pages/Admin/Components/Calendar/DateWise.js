@@ -9,7 +9,10 @@ import { useDispatch } from "react-redux";
 import { setDataByDay } from "../../../../actions";
 
 const DateWise = () => {
-  const [value, setValue] = React.useState([new Date(), new Date()]);
+  const [value, setValue] = React.useState([
+    new Date().setMonth(new Date().getMonth() - 2),
+    new Date(),
+  ]);
   const dispatch = useDispatch();
   return (
     <div style={{ margin: 5 }}>

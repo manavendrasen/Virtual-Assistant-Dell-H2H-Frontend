@@ -57,7 +57,7 @@ const AdminTable = () => {
 
   return (
     <Box className="px-24 border-t-2 border-gray-300 py-8">
-      <Typography variant="h4">Issue Records</Typography>
+      <Typography variant="h5">Issue Records</Typography>
       <div className="flex justify-between py-4 items-center">
         <Box className="flex items-center">
           <Typography>Filter By: </Typography>

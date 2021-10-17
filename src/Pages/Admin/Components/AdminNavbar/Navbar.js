@@ -3,7 +3,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import logo from "./images/dell_logo.svg";
 
 const Navbar = () => (
-  <Box className="flex justify-between items-center px-24 mb-4 h-16 border-b-2 border-gray-300">
+  <Box className="flex justify-between items-center px-24 mb-6 h-16 border-b-2 border-gray-300">
     <Box
       style={{
         display: "flex",
@@ -11,7 +11,7 @@ const Navbar = () => (
         alignItems: "center",
       }}
     >
-      <Avatar src={logo} className="mr-4" />
+      <Avatar sx={{ width: 32, height: 32 }} src={logo} className="mr-3" />
       <Typography variant="h6" className="text-primary">
         Admin DashBoard
       </Typography>
