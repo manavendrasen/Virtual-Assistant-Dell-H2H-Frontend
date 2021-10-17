@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import { useSelector } from "react-redux";
-import "./Component-Styles/RegionDataStyle.css";
 
 const RegionDataDisplay = () => {
   const [myState] = useSelector(state => state.region);

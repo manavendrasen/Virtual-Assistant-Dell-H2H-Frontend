@@ -1,7 +1,7 @@
 import React from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-
+import "@fontsource/roboto/700.css";
 // Material UI Theme
 import theme from "./mui.theme";
 import ReduxProvider from "./store";

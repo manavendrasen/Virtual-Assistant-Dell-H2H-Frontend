@@ -1,9 +1,11 @@
 import Chart from "react-google-charts";
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 import axios from "axios";
-import { setDataByClickOfRegion } from "../../../actions";
-import locationDataHandler from "../../../utils/ChartDataDisplayHandler/locationDataHandler";
+import { setDataByClickOfRegion } from "../../../../actions";
+import locationDataHandler from "../../../../utils/ChartDataDisplayHandler/locationDataHandler";
 
 const GeoLocation = () => {
   const myState = useSelector(state => state.day);
@@ -32,11 +34,12 @@ const GeoLocation = () => {
     <>
       {Data.length > 0 ? (
         <Chart
-          width={800}
-          height={500}
+          width={900}
+          height={600}
           chartType="GeoChart"
           data={locationDataHandler(Data)}
           options={{
+            title: "Failure Patterns By Time",
             colorAxis: { colors: ["red"] },
           }}
           chartEvents={[
@@ -68,11 +71,17 @@ const GeoLocation = () => {
           rootProps={{ "data-testid": "1" }}
         />
       ) : (
-        <div
-          style={{ width: "850px", height: "500px", border: "1px solid black" }}
+        <Box
+          sx={{
+            display: "flex",
+            width: 900,
+            height: 600,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          Loader
-        </div>
+          <CircularProgress />
+        </Box>
       )}
     </>
   );

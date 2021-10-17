@@ -1,10 +1,12 @@
 import React from "react";
+import { Container, Box } from "@mui/material";
 import AdminTable from "./Components/table";
-import Graph from "./Components/Graph";
-import PieChart from "./Components/PieChart";
-import GeoLocation from "./Components/GeoLocationAnalytics";
+import Graph from "./Components/Charts/Toggle";
+import PieChart from "./Components/Charts/PieChart";
+
+import GeoLocation from "./Components/Charts/GeoLocationAnalytics";
 import Navbar from "./Components/AdminNavbar/Navbar";
-import RegionDataDisplay from "./Components/RegionDataDisplay";
+import RegionDataDisplay from "./Components/Charts/RegionDataDisplay";
 import Calendar from "./Components/Calendar/Toggle";
 
 const AdminDashboard = () => (
@@ -12,24 +14,24 @@ const AdminDashboard = () => (
     <Navbar />
 
     <Calendar />
-    <div
+    <Box
       style={{ display: "flex", flexWrap: "wrap", justifyContent: "center" }}
     >
-      <div
+      <Box
         style={{
           margin: 5,
         }}
       >
         <Graph />
-      </div>
-      <div
+      </Box>
+      <Box
         style={{
           margin: 5,
         }}
       >
         <PieChart />
-      </div>
-    </div>
+      </Box>
+    </Box>
 
     <AdminTable />
   </>

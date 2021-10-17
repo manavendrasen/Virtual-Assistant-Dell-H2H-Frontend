@@ -1,12 +1,12 @@
-import * as React from "react";
+import { useState } from "react";
 import ToggleButton from "@mui/material/ToggleButton";
 import ToggleButtonGroup from "@mui/material/ToggleButtonGroup";
-import { Typography, Container, Box } from "@mui/material";
-import DateWise from "./DateWise";
-import YearWise from "./Yearwise";
+import { Typography, Box } from "@mui/material";
+import Graph from "./Graph";
+import GeoLocationAnalytics from "./GeoLocationAnalytics";
 
 const Toggle = () => {
-  const [alignment, setAlignment] = React.useState("Dates");
+  const [alignment, setAlignment] = useState("View By Time");
 
   const handleChange = (event, newAlignment) => {
     setAlignment(newAlignment);
@@ -15,13 +15,10 @@ const Toggle = () => {
   return (
     <Box
       style={{
-        display: "flex",
-        flexDirection: "row-reverse",
-        justifyContent: "space-between",
         alignItems: "center",
-        margin: "0 2.5em",
       }}
     >
+      <Typography sx={{ margin: "1em 2em" }}>Toggle Graph</Typography>
       <ToggleButtonGroup
         color="primary"
         value={alignment}
@@ -29,14 +26,14 @@ const Toggle = () => {
         onChange={handleChange}
         style={{
           height: 45,
+          margin: "1em 2em",
         }}
       >
-        <ToggleButton value="Dates">Dates</ToggleButton>
-        <ToggleButton value="Year">Year</ToggleButton>
+        <ToggleButton value="View By Time">View By Time</ToggleButton>
+        <ToggleButton value="View By Location">View By Location</ToggleButton>
       </ToggleButtonGroup>
       <Box>
-        <Typography>Filter By Date</Typography>
-        {alignment === "Dates" ? <DateWise /> : <YearWise />}
+        {alignment === "View By Time" ? <Graph /> : <GeoLocationAnalytics />}
       </Box>
     </Box>
   );

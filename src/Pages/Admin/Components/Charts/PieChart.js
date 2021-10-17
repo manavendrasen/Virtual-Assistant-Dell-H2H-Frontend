@@ -1,8 +1,10 @@
 import Chart from "react-google-charts";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
 import { useEffect, useState } from "react";
-import pieChartDataHandler from "../../../utils/ChartDataDisplayHandler/pieChartDataHandler";
+import pieChartDataHandler from "../../../../utils/ChartDataDisplayHandler/pieChartDataHandler";
 
 const PieChart = () => {
   const myState = useSelector(state => state.day);
@@ -40,11 +42,17 @@ const PieChart = () => {
           rootProps={{ "data-testid": "1" }}
         />
       ) : (
-        <div
-          style={{ width: "600px", height: "500px", border: "1px solid black" }}
+        <Box
+          sx={{
+            display: "flex",
+            width: 600,
+            height: 500,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          Loader
-        </div>
+          <CircularProgress />
+        </Box>
       )}
     </>
   );

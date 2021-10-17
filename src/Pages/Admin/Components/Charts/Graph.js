@@ -1,8 +1,11 @@
 import Chart from "react-google-charts";
 import axios from "axios";
 import { useSelector } from "react-redux";
+import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import graphDataHandler from "../../../utils/ChartDataDisplayHandler/graphDataHandler";
+import CircularProgress from "@mui/material/CircularProgress";
+import Box from "@mui/material/Box";
+import graphDataHandler from "../../../../utils/ChartDataDisplayHandler/graphDataHandler";
 
 const Graph = () => {
   const myState = useSelector(state => state.day);
@@ -30,7 +33,7 @@ const Graph = () => {
           loader={<div>Loading Chart</div>}
           data={graphDataHandler(Data)}
           options={{
-            title: "Failure Patterns",
+            title: "Failure Patterns By Time",
             hAxis: {
               title: "Time",
               titleTextStyle: { color: "#333" },
@@ -47,11 +50,17 @@ const Graph = () => {
           rootProps={{ "data-testid": "1" }}
         />
       ) : (
-        <div
-          style={{ width: "900px", height: "600px", border: "1px solid black" }}
+        <Box
+          sx={{
+            display: "flex",
+            width: 900,
+            height: 600,
+            justifyContent: "center",
+            alignItems: "center",
+          }}
         >
-          Loader
-        </div>
+          <CircularProgress />
+        </Box>
       )}
     </>
   );

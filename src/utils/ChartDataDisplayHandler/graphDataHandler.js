@@ -35,6 +35,7 @@ const graphDataHandler = data => {
   const result = [];
   result.push(["Date", "Email", "Zip"]);
   data.forEach(element => {
+    const date = element.issueDate ? element.issueDate : element.month;
     result.push([element.issueDate, element.emailErrors, element.zipErrors]);
   });
   return result;

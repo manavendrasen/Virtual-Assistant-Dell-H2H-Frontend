@@ -21,6 +21,19 @@ const DayReducer = (state = initialState, action) => {
 
     return newState;
   }
+  if (action.type === "SET_DATA_BY_YEAR") {
+    const st = action.start;
+    const en = action.end;
+    console.log(st);
+    const newState = [
+      `https://nameless-gorge-89729.herokuapp.com/month/${st}/${en}`,
+      `https://nameless-gorge-89729.herokuapp.com/pie/${st}/${en}`,
+      `https://nameless-gorge-89729.herokuapp.com/location/${st}/${en}`,
+      `https://nameless-gorge-89729.herokuapp.com/table/${st}/${en}`,
+    ];
+
+    return newState;
+  }
 
   return state;
 };

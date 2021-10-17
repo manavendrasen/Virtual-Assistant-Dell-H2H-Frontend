@@ -1,4 +1,4 @@
-import { Box, Avatar } from "@mui/material";
+import { Box, Avatar, Typography } from "@mui/material";
 import logo from "./images/dell_logo.svg";
 
 const Navbar = () => (
@@ -6,9 +6,10 @@ const Navbar = () => (
     sx={{
       display: "flex",
       justifyContent: "space-between",
+      margin: "0 2em",
     }}
   >
-    <div
+    <Box
       style={{
         display: "flex",
         justifyContent: "center",
@@ -16,8 +17,8 @@ const Navbar = () => (
       }}
     >
       <Avatar src={logo} sx={{ margin: 2 }} />
-      <h2>Dell Admin DashBoard</h2>
-    </div>
+      <Typography>Dell Admin DashBoard</Typography>
+    </Box>
 
     <Avatar sx={{ bgcolor: "#B0D4F2", margin: 2 }}>OP</Avatar>
   </Box>

@@ -1,7 +1,7 @@
 import {
   SET_DATA_BY_DAY,
   SET_DATA_BY_CLICK_OF_REGION,
-  SET_INTIIAL_DATA_BY_FETCHING,
+  SET_DATA_BY_YEAR,
 } from "./ActionTypes";
 
 export const setDataByDay = (startDate, endDate) => ({
@@ -15,7 +15,8 @@ export const setDataByClickOfRegion = DATA => ({
   data: DATA,
 });
 
-export const setInitialData = DATA => ({
-  type: SET_INTIIAL_DATA_BY_FETCHING,
-  data: DATA,
+export const setDataByYear = (startDate, endDate) => ({
+  type: SET_DATA_BY_YEAR,
+  start: startDate,
+  end: endDate,
 });
