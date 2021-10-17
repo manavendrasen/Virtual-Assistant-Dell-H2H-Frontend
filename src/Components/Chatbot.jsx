@@ -7,14 +7,25 @@ const Chatbot = () => {
   const onChatClose = () => {
     sessionStorage.clear();
   };
+
+  const handleKeyDown = event => {
+    if (event.key === "Enter") {
+      try {
+        document.querySelector(".rw-send").click();
+      } catch (e) {
+        console.log(e);
+      }
+    }
+  };
+
   return (
-    <div className={styles.chatBot}>
+    // eslint-disable-next-line jsx-a11y/no-static-element-interactions
+    <div className={styles.chatBot} onKeyDown={handleKeyDown}>
       <Widget
         initPayload="greet"
         socketUrl="http://localhost:5005"
         socketPath="/socket.io/"
         title="Dell Support Bot"
-        subtitle="Say Hi to get started!"
         openLauncherImage={chatLauncher}
         inputTextFieldHint="How can I help you?"
         params={{
