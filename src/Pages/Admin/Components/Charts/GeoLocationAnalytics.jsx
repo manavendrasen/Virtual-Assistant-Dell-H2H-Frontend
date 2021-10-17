@@ -43,6 +43,13 @@ const GeoLocation = () => {
             options={{
               title: "Failure Patterns By Time",
               colorAxis: { colors: ["#E4424D"] },
+              tooltip: {
+                textStyle: {
+                  color: "black",
+                  fontName: "roboto",
+                  fontSize: " global-font-size",
+                },
+              },
             }}
             chartEvents={[
               {

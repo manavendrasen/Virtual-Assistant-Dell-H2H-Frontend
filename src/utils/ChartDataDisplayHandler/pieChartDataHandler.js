@@ -3,7 +3,8 @@ const pieChartDataHandler = data => {
   result.push(
     ["Issues", "Total"],
     ["Email", data.totalEmailErrors],
-    ["Zip", data.totalzipErrors]
+    ["Zip", data.totalzipErrors],
+    ["Fraud Email", data.totalfraudMails]
   );
 
   return result;

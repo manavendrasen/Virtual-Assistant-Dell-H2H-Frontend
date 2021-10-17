@@ -1,42 +1,56 @@
-// Assuming that we know that there are n number of errors else we need to have a count + string form of each Issue also assuming we have everydays data with us
-
-// const graphDataHandler = Data => {
-//   // This puts data in single date
-//   const groups = Data.reduce((group, issue) => {
-//     if (!group[issue.date]) {
-//       group[issue.date] = [];
-//     }
-//     group[issue.date].push(issue);
-//     return group;
-//   }, []);
-
-//   const groupArrays = Object.keys(groups).map(date => ({
-//     date,
-//     issues: groups[date],
-//   }));
-
-//   const result = [];
-//   result.push(["Date", "Email", "Zip"]);
-
-//   groupArrays.forEach(ele => {
-//     let email = 0;
-//     let zip = 0;
-//     for (let i = 0; i < ele.issues.length; i += 1) {
-//       if (ele.issues[i].issueIn === "Email") email += 1;
-//       else zip += 1;
-//     }
-//     result.push([ele.date, email, zip]);
-//   });
-
-//   return result;
-// };
-
 const graphDataHandler = data => {
   const result = [];
-  result.push(["Date", "Email", "Zip"]);
+  result.push(["Date", "Email", "Zip", "Fraud \n Email"]);
   data.forEach(element => {
-    const date = element.issueDate ? element.issueDate : element.month;
-    result.push([element.issueDate, element.emailErrors, element.zipErrors]);
+    let date = element.issueDate ? element.issueDate : element.month;
+    if (date === element.month) {
+      switch (element.month) {
+        case 1:
+          date = "January";
+          break;
+        case 2:
+          date = "February";
+          break;
+        case 3:
+          date = "March";
+          break;
+        case 4:
+          date = "April";
+          break;
+        case 5:
+          date = "May";
+          break;
+        case 6:
+          date = "June";
+          break;
+        case 7:
+          date = "July";
+          break;
+        case 8:
+          date = "August";
+          break;
+        case 9:
+          date = "September";
+          break;
+        case 10:
+          date = "October";
+          break;
+        case 11:
+          date = "November";
+          break;
+        case 12:
+          date = "December";
+          break;
+        default:
+          data = "Incorrect";
+      }
+    }
+    result.push([
+      date,
+      element.emailErrors,
+      element.zipErrors,
+      element.fraudList,
+    ]);
   });
   return result;
 };
