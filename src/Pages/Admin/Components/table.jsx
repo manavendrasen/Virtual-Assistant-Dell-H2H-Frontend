@@ -82,22 +82,24 @@ const AdminTable = () => {
             </div>
           </div>
         </Box>
-        <Button
-          variant="contained"
-          component="span"
-          onClick={pdfDownload}
-          startIcon={<DownloadIcon />}
-        >
-          Download
-        </Button>
-        <Button
-          variant="contained"
-          component="span"
-          onClick={() => convertExcel(Data)}
-          startIcon={<DownloadIcon />}
-        >
-          Excel
-        </Button>
+        <div className="flex gap-4">
+          <Button
+            variant="contained"
+            component="span"
+            onClick={pdfDownload}
+            startIcon={<DownloadIcon />}
+          >
+            Download PDF
+          </Button>
+          <Button
+            variant="contained"
+            component="span"
+            onClick={() => convertExcel(Data)}
+            startIcon={<DownloadIcon />}
+          >
+            Download Excel
+          </Button>
+        </div>
       </div>
 
       <Paper

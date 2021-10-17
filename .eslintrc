@@ -40,7 +40,8 @@
     "semi": ["warn", "always"],
     "no-unused-vars": "off",
     "no-underscore-dangle": "off",
-    "no-param-reassign": "off"
+    "no-param-reassign": "off",
+    "import/no-unresolved": "off"
   },
   "plugins": ["react", "prettier"]
 }
