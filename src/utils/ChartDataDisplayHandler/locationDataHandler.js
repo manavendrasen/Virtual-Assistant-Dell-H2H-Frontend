@@ -5,7 +5,7 @@ const locationDataHandler = data => {
   data.forEach(element => {
     result.push([
       element.location,
-      element.emailErrors + element.fraudList + element.zipErrors,
+      (element.emailErrors + element.fraudList + element.zipErrors) * 10,
     ]);
   });
   return result;
