@@ -23,7 +23,7 @@ const OrderDetails = () => {
   }, []);
   return (
     <>
-      <Navbar />
+      <Navbar title="Admin Dashboard" />
       <div className="px-24 py-4">
         <Typography variant="h5">Order Details</Typography>
 
